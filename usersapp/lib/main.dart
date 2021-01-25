@@ -22,8 +22,7 @@ class _HomePageState extends State<HomePage> {
   List usersData;
   
   getUsers() async {
-    http.Response response = await http.get('http://localhost:4000/api/users');
-    // 10.0.2.2:
+    http.Response response = await http.get('http://10.0.2.2:4000/api/users');
     data = json.decode(response.body);
     setState(() {
       usersData = data['users'];
@@ -62,11 +61,11 @@ class _HomePageState extends State<HomePage> {
                       ),
                   ),
                   CircleAvatar(
-                    backgroundImage: NetworkImage(usersData[index]['avatar']),
+                    backgroundImage: Image.asset('assets/icono.jpg'),
                     ),
                     Padding(padding: const EdgeInsets.all(10.0),
                     child: Text(
-                      "${usersData[index]["firstName"]} ${usersData[index]["firstName"]}",
+                      "${usersData[index]["firstName"]} ${usersData[index]["lastName"]}",
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.w700

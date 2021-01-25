@@ -14,7 +14,7 @@ router.get('/api/users/create', async (req, res) => {
         await User.create({
             firstName: faker.name.firstName(),
             lastName: faker.name.lastName(),
-            avatar: faker.image.avatar()
+            avatar: 'https://lh3.googleusercontent.com/proxy/qx5vnECPVCnx6aBo8XI-CBGAhFUo8uL7Clr0CAJbtfGmbKgsYcI3NaKW2VxA9SaagB-gcLcNGybT3RffKLeE7zwbpacF3_5dH0A6QQff0MyHcnHespWH',
         });
     }
     res.json({message: '5 Users created'});
