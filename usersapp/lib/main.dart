@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'dart:async';
+// import 'dart:async';
 import 'dart:convert';
 
 void main() {
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                   ),
                   CircleAvatar(
-                    backgroundImage: Image.asset('assets/icono.jpg'),
+                    child: Image.asset ('assets/images/icono.jpg'),
                     ),
                     Padding(padding: const EdgeInsets.all(10.0),
                     child: Text(
